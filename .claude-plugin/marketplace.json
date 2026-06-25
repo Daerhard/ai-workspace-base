@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "{{marketplace-name}}",
+  "description": "{{Team description — what this workspace is for}}",
+  "owner": {
+    "name": "{{Team or org name}}"
+  },
+  "plugins": [
+    {
+      "name": "workspace-skills",
+      "displayName": "Workspace Skills",
+      "description": "Team workspace skills — code documentation and knowledge loading",
+      "source": "./general/skills",
+      "skills": ["./code-documentation", "./load-knowledge"],
+      "strict": false,
+      "category": "productivity",
+      "keywords": ["skills", "documentation", "knowledge"]
+    },
+    {
+      "name": "workspace-setup",
+      "displayName": "Workspace Setup",
+      "description": "One-time skills for generating a new team workspace from this template",
+      "source": "./setup/skills",
+      "skills": ["./generate-workspace"],
+      "strict": false,
+      "category": "productivity",
+      "keywords": ["setup", "fork", "init", "workspace"]
+    }
+  ]
+}
